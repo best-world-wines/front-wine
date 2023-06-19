@@ -7,13 +7,14 @@ import { NotFoundPage } from './pages/NotFoundPage/NotFound';
 import { Header } from './components/Header';
 import React from 'react';
 import { Breadcrumbss } from './components/Breadcrumbs/Breadcrumbs';
+import { Footer } from './components/Footer';
 
 export const App = () => {
   return (
       <div className="App">
-        <main className='main'>
           <Header />
-          <Breadcrumbss />
+        <main className='main'>
+        <Breadcrumbss />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="wines" element={<WinesList />} />
@@ -21,6 +22,7 @@ export const App = () => {
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
+        <Footer />
       </div>
   );
 };
