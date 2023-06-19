@@ -1,0 +1,35 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f0f0f0;
+	padding: 20px;
+	background-color: rgb(250, 100, 100);
+	border-top: 1px solid black;
+	position: relative;
+	bottom: 0;
+
+
+  &__logo,
+  &__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+
+  &__links {
+		display: flex;
+		justify-content: space-between;
+		gap: 36px;
+
+		&-link {
+			text-decoration: none;
+			color: white;
+			cursor: pointer;
+		}
+  }
+}
