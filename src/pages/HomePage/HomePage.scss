@@ -1,3 +1,65 @@
 .homepage {
-	height: 2000px;
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    padding-bottom: 40px ;
+    text-align: center;
+    @media (min-width: 1024px) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 50px;
+    }
+  }
+
+  &__description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    @media (min-width: 1024px) {
+      max-width: calc(90%);
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 20px;
+    height: 20px;
+    width: 77px;
+    margin: 0 auto;
+    text-decoration: none;
+    border-radius: 10%;
+    border: 2px solid;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    font-size: 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: #ff1b36;
+      color: #fff;
+    }
+  }
 }

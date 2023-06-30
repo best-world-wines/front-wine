@@ -5,19 +5,36 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	height: 94px;
 	border-bottom: 1px solid black;
 	overflow: hidden;
 	z-index: 10;
-	background-color: rgb(250, 100, 100);
+	background-color: #ff1b36;
 
 	&__logo {
 		margin-left: 34px;
+    height: 40px;
+    width: 40px;
+    transition: all 0.3s;
+    &:hover {
+      transform: rotate(-45deg);
+    }
+
+    @media (min-width: 768px) {
+      height: 45px;
+      width: 45px;
+    }
+    @media (min-width: 1024px) {
+      height: 50px;
+      width: 50px;
+    }
 	}
 }
 
 .nav {
 	&__list {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;;
 		max-width: 1200px;
 		display: flex;
 		flex: row;
@@ -28,39 +45,31 @@
 	}
 
 	&__link {
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
 		text-decoration: none;
 		color: black;
-		padding: 0px 34px;
+		padding: 41px 34px;
 		text-transform: uppercase;
-		font-size: 12px;
+		font-size: 9px;
 		font-weight: 800;
 		letter-spacing: 0.04em;
 		position: relative;
+    border-bottom: 3px solid #00000000;
+    transition: all 0.3s ease;
 
-		transition: color 0.3s ease;
-
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: -39px; /* Змінено */
-			left: 0;
-			height: 3px;
-			width: 100%;
-
-			transition: background-color 0.3s ease;
-		}
+    @media (min-width: 768px) {
+      font-size: 11px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 13px;
+    }
 
 		&--active {
-			color: black;
-			border-radius: 50%;
-
-			&::after {
-				background: black;
-			}
-		}
-
-		&:hover {
-			color: black;
+			border-color: #000;
 		}
 	}
 }
