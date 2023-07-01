@@ -1,0 +1,47 @@
+.in-vino {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50vh;
+  width: 100%;
+  background-image: url('../../images/background/1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.686);
+  }
+
+  &__title {
+    display: block;
+    width: max-content;
+    z-index: 100;
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    align-items: center;
+    line-height: 100%;
+    color: #ffffff;
+
+    @media (min-width: 768px) {
+      font-size: 50px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 60px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 70px;
+    }
+  }
+}

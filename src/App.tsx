@@ -16,15 +16,13 @@ export const App = () => {
       <div className="App">
         <Header />
         <main className='main'>
-          <ContainerWrap>
-            <Breadcrumbss />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="wines" element={<WinesList />} />
-              <Route path="home" element={<Navigate to="/" replace />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </ContainerWrap>
+          <Breadcrumbss />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="wines" element={<WinesList />} />
+            <Route path="home" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
         </main>
         <Footer />
       </div>
