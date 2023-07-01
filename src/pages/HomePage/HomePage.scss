@@ -20,15 +20,18 @@
   }
 
   &__title {
-    font-size: 30px;
+    font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 40px;
 
     @media (min-width: 768px) {
-      font-size: 40px;
+      font-size: 50px;
     }
     @media (min-width: 1024px) {
-      font-size: 50px;
+      font-size: 60px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 60px;
     }
   }
 
@@ -58,7 +61,7 @@
 
     &:hover {
       transform: scale(1.1);
-      background-color: #ff1b36;
+      background-color: #D90429;
       color: #fff;
     }
   }
