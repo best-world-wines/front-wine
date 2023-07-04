@@ -31,12 +31,13 @@ export const SliderComponent = () => {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         centeredSlides={true}
+        navigation={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
         spaceBetween={20}
-        slidesPerView={2}
+        slidesPerView={1}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       >
