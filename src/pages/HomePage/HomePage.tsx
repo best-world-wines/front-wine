@@ -4,6 +4,7 @@ import { SliderComponent } from "../../components/SliderComponent";
 import { Link } from "react-router-dom";
 import { InVino } from "../../components/InVinoVeritas";
 import { ContainerWrap } from "../../components/ContainerWrap";
+import { Category } from "../../components/Category";
 
 
 export const HomePage = () => {
@@ -33,6 +34,7 @@ export const HomePage = () => {
         </div>
       </ContainerWrap>
       <InVino/>
+      <Category/>
     </>
   )
 }
