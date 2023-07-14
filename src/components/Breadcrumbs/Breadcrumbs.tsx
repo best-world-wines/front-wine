@@ -16,7 +16,14 @@ const routes = [
     name: 'Wines',
     showBreadcrumb: true,
   },
+  {
+    path: 'wines/1',
+    name: 'Wines > 1',
+    showBreadcrumb: true,
+  },
 ];
+
+
 
 export const Breadcrumbss = () => {
   const location = useLocation();

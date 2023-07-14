@@ -38,8 +38,8 @@ export const SliderComponent = () => {
         }}
         spaceBetween={20}
         slidesPerView={1}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log('slide change')}
       >
         {vineImg.map(one => {
           return (

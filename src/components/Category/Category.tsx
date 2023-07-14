@@ -20,6 +20,7 @@ export const Category = () => {
         {categoryWine.map(category => {
           return(
             <Link
+              key={category.id}
               to={`/${category.url}`}
               style={{ textDecoration: 'none' }}
             >
