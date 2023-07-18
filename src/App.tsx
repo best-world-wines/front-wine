@@ -16,8 +16,18 @@ import {WineCardDetail} from './components/WineCardDetail'
 
 
 export const App = () => {
-  const [vine, setVine] = useState([]);
-  // dgagadgsgds
+  const [wine, setWine] = useState([])
+  const [oneWine, setOneWine] = useState({});
+
+  useEffect(() => {
+    fetch('https://api.wine.exisvitae.com/api/v1/wines/pages',)
+      .then((response) => {
+        return response.json()
+      })
+      .then ((wines) => {
+        setWine(wines.productsDto)
+      })
+  },[])
 
   return (
       <div className="App">
@@ -26,10 +36,19 @@ export const App = () => {
           <Breadcrumbss />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="wines" element={<WinesList />} />
+            <Route path="wines" element={
+              <WinesList
+                wine={wine}
+                setOneWine={setOneWine}
+              />}
+            />
             <Route path="home" element={<Navigate to="/" replace />} />
             <Route path="*" element={<NotFoundPage />} />
-            <Route path='wines/:vineId' element={<WineCardDetail/>}/>
+            <Route path='wines/:vineId' element={
+              <WineCardDetail
+
+              />}
+            />
           </Routes>
         </main>
         <Footer />

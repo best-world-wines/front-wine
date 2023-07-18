@@ -1,7 +1,10 @@
 import React from "react"
+import { ContainerWrap } from "../ContainerWrap"
 
 export const WineCardDetail = () => {
   return (
-    <div className="">Card Details</div>
+    <ContainerWrap>
+      <h1>Header</h1>
+    </ContainerWrap>
   )
 }
