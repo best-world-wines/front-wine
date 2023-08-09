@@ -10,11 +10,10 @@ export const WinesList = ({wine, setOneWine}) => {
     setOneWine(oneItem)
   }
 
+  
+
   return (
    <>
-   <h1>qweq</h1>
-   <h2>add list</h2>
-   <h2>add list</h2>
     <ContainerWrap>
       <div>Test</div>
       <div className='winelist__title'>WinesList</div>
