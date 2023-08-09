@@ -25,6 +25,7 @@ export const WinesList = () => {
   return (
    <>
     <ContainerWrap>
+      <div>Test</div>
       <div className='winelist__title'>WinesList</div>
       <div className="winelist__wrap">
         {wine.map(item => {
