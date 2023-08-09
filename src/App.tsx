@@ -29,6 +29,9 @@ export const App = () => {
       })
   },[])
 
+  console.log(wine);
+
+
   return (
       <div className="App">
         <Header />
