@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/front-wine/static/css/main.78ff34d5.chunk.css",
-    "main.js": "/front-wine/static/js/main.d0d2804d.chunk.js",
-    "main.js.map": "/front-wine/static/js/main.d0d2804d.chunk.js.map",
+    "main.js": "/front-wine/static/js/main.a1ac81bb.chunk.js",
+    "main.js.map": "/front-wine/static/js/main.a1ac81bb.chunk.js.map",
     "runtime-main.js": "/front-wine/static/js/runtime-main.961efd02.js",
     "runtime-main.js.map": "/front-wine/static/js/runtime-main.961efd02.js.map",
     "static/css/2.3824c8cd.chunk.css": "/front-wine/static/css/2.3824c8cd.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.3824c8cd.chunk.css",
     "static/js/2.38bb064b.chunk.js",
     "static/css/main.78ff34d5.chunk.css",
-    "static/js/main.d0d2804d.chunk.js"
+    "static/js/main.a1ac81bb.chunk.js"
   ]
 }
