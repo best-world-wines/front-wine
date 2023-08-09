@@ -12,6 +12,7 @@ export const WinesList = ({wine, setOneWine}) => {
 
   return (
    <>
+   <div>Card</div>
     <ContainerWrap>
       <div>Test</div>
       <div className='winelist__title'>WinesList</div>
