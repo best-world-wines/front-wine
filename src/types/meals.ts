@@ -1,6 +1,6 @@
-type meals = {
+type Meals = {
   id: number;
   name: string;
   image: string;
-  is_deleted: boolean;
+  isDeleted: boolean;
 }

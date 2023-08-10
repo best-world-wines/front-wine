@@ -1,5 +1,5 @@
-type grapes = {
+type Grapes = {
   id: number;
   name: string;
-  is_deleted: boolean;
+  isDeleted: boolean;
 }

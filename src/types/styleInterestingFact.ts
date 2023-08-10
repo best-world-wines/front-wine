@@ -1,4 +1,4 @@
 type styleIterestingFact = {
-  wine_style_id: number;
-  interesting_facts: string;
+  wineStyleId: number;
+  interestingFacts: string;
 }

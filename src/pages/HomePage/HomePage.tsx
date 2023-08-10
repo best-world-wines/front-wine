@@ -7,7 +7,9 @@ import { ContainerWrap } from "../../components/ContainerWrap";
 import { Category } from "../../components/Category";
 
 
-export const HomePage = () => {
+export const HomePage = ({
+  sliderComponent
+}) => {
   return (
     <>
       <ContainerWrap>
@@ -28,6 +30,7 @@ export const HomePage = () => {
             </div>
             <div className="homepage__slider">
               <SliderComponent
+                sliderComponent={sliderComponent}
               />
             </div>
           </div>

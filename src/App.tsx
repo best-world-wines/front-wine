@@ -26,10 +26,11 @@ export const App = () => {
       })
       .then ((wines) => {
         setWine(wines.productsDto)
+        // console.log(wines);
+
       })
   },[])
 
-  console.log(wine);
 
 
   return (
@@ -38,7 +39,15 @@ export const App = () => {
         <main className='main'>
           <Breadcrumbss />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/"
+              element={
+                <HomePage
+                  sliderComponent={wine}
+                />
+              }
+
+            />
             <Route path="wines" element={
               <WinesList
                 wine={wine}

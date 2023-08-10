@@ -7,6 +7,10 @@
   font-family: 'Montserrat', sans-serif;
   color: #000;
 
+  @media (min-width: 1024px) {
+   width: 300px;
+  }
+
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -23,13 +27,16 @@
     height: 200px;
     width: 150px;
     object-fit: contain;
-    background-color: #2B2D42;
   }
 
   &__title{
+    max-width: 10ch;
+    overflow: hidden;
+    white-space: nowrap;
     padding: 10px 0px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 30px;
+
   }
 
   &__price {
