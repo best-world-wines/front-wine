@@ -1,14 +1,19 @@
 import './App.scss';
 
 import { Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+
 import { HomePage } from './pages/HomePage/HomePage';
 import { WinesList } from './pages/WineListPage/WineList';
 import { NotFoundPage } from './pages/NotFoundPage/NotFound';
+
 import { Header } from './components/Header';
-import React, { useEffect, useState } from 'react';
 import { Breadcrumbss } from './components/Breadcrumbs/Breadcrumbs';
 import { Footer } from './components/Footer';
 import {WineCardDetail} from './components/WineCardDetail'
+
+
+import { WineCardType } from './types/WineCard';
 
 
 
@@ -16,8 +21,8 @@ import {WineCardDetail} from './components/WineCardDetail'
 
 
 export const App = () => {
-  const [wine, setWine] = useState([])
-  const [oneWine, setOneWine] = useState({});
+  const [wines, setWines] = useState<WineCardType[] | null>(null)
+  const [oneWine, setOneWine] = useState<WineCardType | null>(null);
 
   useEffect(() => {
     fetch('https://api.wine.exisvitae.com/api/v1/wines/pages',)
@@ -25,12 +30,13 @@ export const App = () => {
         return response.json()
       })
       .then ((wines) => {
-        setWine(wines.productsDto)
+        setWines(wines.productsDto)
         // console.log(wines);
 
       })
   },[])
 
+  console.log(wines);
 
 
   return (
@@ -43,14 +49,14 @@ export const App = () => {
               path="/"
               element={
                 <HomePage
-                  sliderComponent={wine}
+                  sliderComponent={wines}
                 />
               }
 
             />
             <Route path="wines" element={
               <WinesList
-                wine={wine}
+                wines={wines}
                 setOneWine={setOneWine}
               />}
             />

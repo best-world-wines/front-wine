@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState, FC } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from 'swiper';
@@ -9,43 +9,18 @@ import 'swiper/modules/navigation/navigation.scss'
 import './SliderComponent.scss'
 import { Link } from "react-router-dom";
 import { log } from "console";
+import { WineCardType } from "../../types/WineCard";
 
-// const vineImg = [
-//   {src:'img/1.jpeg', id: '1'},
-//   {src:'img/2.jpeg', id: '2'},
-//   {src:'img/3.jpeg', id: '3'},
-//   {src:'img/4.jpeg', id: '4'},
-//   {src:'img/1.jpeg', id: '5'},
-//   {src:'img/2.jpeg', id: '6'},
-//   {src:'img/3.jpeg', id: '7'},
-//   {src:'img/4.jpeg', id: '8'},
-//   {src:'img/1.jpeg', id: '9'},
-//   {src:'img/2.jpeg', id: '10'},
-// ]
+type Props = {
+  sliderComponent: WineCardType[] | null
+}
 
-export const SliderComponent = ({
+export const SliderComponent: FC<Props> = ({
   sliderComponent
 }) => {
   const [swiperRef, setSwiperRef] = useState(null);
 
-  const [wine, setWine] = useState([])
-
-  useEffect(() => {
-    fetch('https://api.wine.exisvitae.com/api/v1/wines/pages',)
-      .then((response) => {
-        return response.json()
-      })
-      .then ((wines) => {
-        setWine(wines.productsDto)
-        // console.log(wines);
-
-      })
-  },[])
-
-
-
-
-  const vineImg=wine
+  const vineImg=sliderComponent;
 
   console.log(vineImg);
 

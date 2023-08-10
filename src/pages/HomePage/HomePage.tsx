@@ -1,13 +1,17 @@
-import React from "react";
+import React, { FC } from "react";
 import '../HomePage/HomePage.scss';
 import { SliderComponent } from "../../components/SliderComponent";
 import { Link } from "react-router-dom";
 import { InVino } from "../../components/InVinoVeritas";
 import { ContainerWrap } from "../../components/ContainerWrap";
 import { Category } from "../../components/Category";
+import { WineCardType } from "../../types/WineCard";
 
+type Props = {
+  sliderComponent: WineCardType[] | null
+}
 
-export const HomePage = ({
+export const HomePage: FC<Props> = ({
   sliderComponent
 }) => {
   return (

@@ -1,4 +1,4 @@
-type WineCard = {
+ export type WineCardType = {
   id: number;
   name: string;
   varietal: string;
@@ -17,4 +17,14 @@ type WineCard = {
   styleId: number;
   typeId: number;
   regionId: number;
+  acidityValue:number;
+  alcohol: number;
+  grapes: null;
+  images: string[];
+  intensityValue: number;
+  meals: null;
+  regions: null;
+  type: string;
+  wineStyle: object;
+  wineType: object;
 }
